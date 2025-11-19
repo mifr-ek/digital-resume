@@ -200,7 +200,7 @@ section header p {
 }
 
 .hero h1 {
-  font-size: clamp(30px, 5vw, 44px);
+  font-size: 40px;
   line-height: 1.15;
   margin-bottom: 14px;
 }
