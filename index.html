@@ -3,209 +3,417 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Digital Ansøgning – Mie Michella Frederiksen</title>
+    <title>Mie Michella – Digital ansøgning</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header / Hero -->
-    <header>
-      <h1>Mie Michella Frederiksen</h1>
-      <p>Digital ansøgning til praktikplads</p>
-
-      <div class="character">
-        <img
-          src="./img/figurinetransp.png"
-          alt="Sød figur der vinker"
-          class="character-img"
-        />
-        <div class="speech-bubble">Velkommen!</div>
-      </div>
-    </header>
-
     <!-- Navigation -->
     <nav>
-      <a href="#profile"><i class="fas fa-user"></i> Profil</a>
-      <a href="#motivation"><i class="fas fa-lightbulb"></i> Motivation</a>
-      <a href="#experience"><i class="fas fa-briefcase"></i> Erfaring</a>
-      <a href="#projects"><i class="fas fa-folder-open"></i> Projekter</a>
-      <a href="#skills"><i class="fas fa-star"></i> Færdigheder</a>
-      <a href="#contact"><i class="fas fa-envelope"></i> Kontakt</a>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="nav-toggle" aria-expanded="false" aria-label="Åbn menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <a href="#motivation"><i class="fas fa-lightbulb"></i>Motivation</a>
+      <a href="#offer"><i class="fas fa-wand-magic-sparkles"></i>Bidrag</a>
+      <a href="#projects"><i class="fas fa-folder-open"></i>Projekter</a>
+      <a href="#skills"><i class="fas fa-star"></i>Færdigheder</a>
+      <a href="#experience"><i class="fas fa-briefcase"></i>Erfaring</a>
+      <a href="#contact"><i class="fas fa-envelope"></i>Kontakt</a>
+
+      <div class="lang-switch">
+        <span class="lang active">DA</span>
+        <a href="en/" class="lang">EN</a>
       </div>
     </nav>
 
-    <!-- Profilsektion -->
-    <section id="profile">
-      <div class="profile-content">
-        <div class="profile-image fade-left">
-          <img src="./img/me.jpg" alt="Mit Billede" />
-        </div>
-        <div class="profile-text fade-right">
-          <h2>
-            Hejsa, mit navn er Mie<br />- og jeg studerer multimediedesign!
-          </h2>
-          <p>
-            Jeg er lige nu på 3. semester med Frontend Design som valgfag. Jeg
-            elsker at arbejde med det visuelle – at skabe grafiske løsninger,
-            der fanger øjet og giver en god oplevelse. Jeg søger en
-            praktikplads, hvor jeg kan bringe min kreativitet i spil og samtidig
-            udvikle mig endnu mere inde for design og digitale udtryk.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Motivation -->
-    <section id="motivation" class="fade-in">
-      <div class="content">
-        <h2>Motivation</h2>
-        <p>
-          "Jeg bliver motiveret af at skabe digitale løsninger, hvor kreativitet
-          og æstetik går hånd i hånd med brugeroplevelsen. Det er især det
-          visuelle, der fanger mig – at arbejde med farver, typografi, layout og
-          stemning, så et projekt ikke bare fungerer, men også føles
-          inspirerende. Jeg elsker at udvikle designs som fortæller en historie
-          og skaber en oplevelse brugeren husker. I en praktikplads håber jeg at
-          kunne udfordre mig selv, dykke dybere ned i designprocessen og lære
-          hvordan man omsætter idéer til digitale oplevelser, der virkelig
-          leverer."
-        </p>
-      </div>
-    </section>
-
-    <!-- Erfaring -->
-    <section id="experience" class="fade-in">
-      <div class="content">
-        <h2>Erfaring</h2>
-
-        <ul class="experience-list">
-          <li>
-            Animationsprojekt i Blender: Skabte en kort animationsfilm som del
-            af Digital Media-uddannelsen.
-          </li>
-          <li>
-            Skoleprojekter i Digital Media: Udvikling af interaktive websites
-            med HTML, CSS og JavaScript.
-          </li>
-          <li>
-            Personlige kodningsprojekter: Eksperimenteret med responsive design,
-            animationer og brugeroplevelse.
-          </li>
-          <li>
-            Grafisk design og visuel kommunikation (MMD): Arbejdet med
-            typografi, farveskemaer og layout til både web og digitale mockups.
-          </li>
-          <li>
-            Webprojekter i MMD: Skabt interaktive prototyper i Figma og websites
-            med fokus på intuitiv navigation og visuel konsistens.
-          </li>
-          <li>
-            Animations- og bevægelsesdesign i MMD: Udviklet micro-interactions
-            og transitions i After Effects og Lottie for at styrke
-            brugeroplevelsen.
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Projekter -->
-    <section id="projects" class="fade-in">
-      <div class="content">
-        <h2>Projekter</h2>
-        <div class="projects">
-          <div class="project-card">
-            <h3>Github</h3>
-            <p>
-              Se nogle af mine projekter og eksamensopgaver – både individuelle
-              og gruppeprojekter – på min GitHub.
-              <a href="https://github.com/mifr-ek">Min github</a>
+    <main>
+      <!-- Profil -->
+      <section id="profile" class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <p class="eyebrow">Frontend-design</p>
+            <h1>Hej! Jeg er Mie 👋</h1>
+            <p class="lead">
+              Jeg studerer Multimediedesign på 3. semester. Jeg elsker at få
+              <strong>design til at se lækkert ud</strong> – med fokus på
+              farver, typografi, spacing og grafik. Jeg kan det basale i HTML,
+              CSS og JS, og vil meget gerne nørde videre og lære endnu mere
+              omkring styling og visuelle detaljer i min praktik.
             </p>
+            <div class="cta">
+              <a class="btn btn-primary" href="#contact">Kontakt</a>
+              <a class="btn" href="https://github.com/mifr-ek" target="_blank"
+                >GitHub</a
+              >
+              <a
+                class="btn btn-ghost"
+                href="./assets/Mie-Michella-CV.pdf"
+                target="_blank"
+                download
+              >
+                <i class="fa-regular fa-file-pdf"></i>CV (PDF)
+              </a>
+            </div>
+          </div>
+          <div class="portrait">
+            <img src="./img/me.jpg" alt="Portræt af Mie Michella" />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Færdigheder -->
-    <section id="skills" class="fade-in skills-section">
-      <div class="content">
-        <h2>Færdigheder</h2>
-        <p>
-          Gennem mit studie har jeg arbejdet med både design og frontend, og
-          undervejs har jeg opbygget erfaring med forskellige digitale
-          værktøjer. Nedenfor kan du se nogle af de programmer, jeg har arbejdet
-          med og anvendt i projekter.
-        </p>
-        <div class="cells">
-          <div class="cell">
-            <img src="./img/html.webp" alt="html logo" /><span>HTML</span>
-          </div>
-          <div class="cell">
-            <img src="./img/css.webp" alt="css logo" /><span>CSS</span>
-          </div>
-          <div class="cell">
-            <img src="./img/ai.webp" alt="adobe illustrator logo" /><span
-              >Adobe Illustrator</span
-            >
-          </div>
-          <div class="cell">
-            <img src="./img/pr.webp" alt="adobe premiere logo" /><span
-              >Adobe Premiere</span
-            >
-          </div>
-          <div class="cell">
-            <img src="./img/figma.webp" alt="figma logo" /><span>Figma</span>
-          </div>
-          <div class="cell">
-            <img src="./img/trello.webp" alt="trello logo" /><span>Trello</span>
-          </div>
-          <div class="cell">
-            <img src="./img/git.webp" alt="git logo" /><span>Git</span>
-          </div>
-          <div class="cell">
-            <img src="./img/github.webp" alt="github logo" /><span>Github</span>
-          </div>
-          <div class="cell">
-            <img
-              src="./img/adobeafter.webp"
-              alt="adobe after effects logo"
-            /><span>Adobe After Effects</span>
-          </div>
-          <div class="cell">
-            <img src="./img/astro.png" alt="astro logo" /> <span>Astro</span>
+      <!-- Motivation -->
+      <section id="motivation">
+        <div class="container">
+          <header>
+            <h2>Profil og Motivation</h2>
+            <p>Hvem er jeg og hvad er min motivation?</p>
+          </header>
+
+          <div class="grid-2">
+            <article class="card">
+              <h3>Hvem Jeg Er</h3>
+              <p>
+                Jeg er ikke bleg for at tage en god sludder og dele ud af mit
+                gode humør, men jeg siger også til, hvis jeg har en dag, hvor
+                tempoet ikke er helt i top. Jeg er utrolig lærenem og engageret
+                i det jeg laver, og tager med glæde imod nye opgaver og
+                udfordringer.
+              </p>
+
+              <p>
+                Jeg lever med angst, hvilket betyder at jeg arbejder bedst i
+                rolige og strukturerede rammer – især når jeg skal ind i nye
+                omgivelser eller møde mange nye mennesker på én gang. Når rammen
+                er tydelig, falder jeg hurtigt til, arbejder koncentreret og
+                bidrager med stabilitet, engagement og et positivt sind. Jeg
+                kommunikerer åbent og siger til i god tid, så samarbejdet bliver
+                trygt og velfungerende.
+              </p>
+
+              <p>
+                I min fritid er jeg social med venner, familie og kæresten,
+                spiller computer eller PS5 og nyder naturen på lange gåture.
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Hvad Jeg Søger</h3>
+              <p>
+                Jeg leder efter en praktikplads, hvor jeg kan fordybe mig i
+                UX/UI og arbejde med at skabe digitale oplevelser, der både
+                fungerer intuitivt og ser indbydende ud. Jeg er især nysgerrig
+                på mobile design, design systems og de små greb som icons og
+                micro-interactions, der får et interface til at føles levende og
+                gennemtænkt.
+              </p>
+
+              <p>
+                Selvom jeg har klare interesser, er jeg ikke kræsen. Jeg er åben
+                for at lære det meste og trives med at udforske nye værktøjer,
+                processer og arbejdsområder, så længe jeg kan udvikle mig og
+                bidrage til noget meningsfuldt.
+              </p>
+
+              <p>
+                Jeg vil super gerne blive bedre til at kombinere
+                brugerforståelse og visuelt design, og jeg er særligt
+                interesseret i requirements gathering, dataanalyse og iterative
+                designprocesser. Det motiverer mig at følge en idé hele vejen
+                fra skitse til færdigt produkt, og jeg håber at komme et sted
+                hen, hvor jeg kan lære af folk, der brænder for faget.
+              </p>
+            </article>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Kontakt -->
-    <section id="contact" class="fade-in">
-      <div class="content">
-        <h2>Kontakt</h2>
-        <p>
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:din@mail.dk">din@mail.dk</a>
-        </p>
-        <p>
-          <i class="fab fa-linkedin"></i>
-          <a href="https://linkedin.com" target="_blank">Mit LinkedIn</a>
-        </p>
-        <p>
-          Portfolio:
-          <a href="https://mitportfolio.dk" target="_blank">Mit portfolio</a>
-        </p>
-      </div>
-    </section>
+      <!-- Mit bidrag -->
+      <section id="offer">
+        <div class="container">
+          <header>
+            <h2>Bidrag</h2>
+            <p>
+              Jeg har styr på det kreative – og vil gerne blive endnu bedre
+              teknisk. Her er hvad jeg bl.a. kan bidrage med:
+            </p>
+          </header>
 
-    <!-- Footer -->
+          <div class="timeline">
+            <div class="tl-item">
+              <span class="dot"></span>
+              <div>
+                <h3>UI-polish</h3>
+                <p>
+                  Jeg kan godt lide at nørde med detaljerne: farver, typografi,
+                  spacing og de små justeringer, der får et design til at føles
+                  gennemarbejdet og rart at bruge.
+                </p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <span class="dot"></span>
+              <div>
+                <h3>Grafik & Micro-Motion</h3>
+                <p>
+                  Jeg elsker at give designet lidt ekstra personlighed med små
+                  bevægelser eller visuelle detaljer, der gør en digital
+                  oplevelse mere levende.
+                </p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <span class="dot"></span>
+              <div>
+                <h3>Basal Kode</h3>
+                <p>
+                  Jeg har et solidt fundament i HTML og CSS, og udforsker stadig
+                  JavaScript på startniveau – og netop derfor glæder jeg mig til
+                  at lære mere og få det til at give mening i praksis.
+                </p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <span class="dot"></span>
+              <div>
+                <h3>Design Systemer</h3>
+                <p>
+                  Jeg arbejder struktureret med komponenter, grids og farver, og
+                  kan godt lide at skabe et UI, der hænger sammen på tværs af
+                  sider og formater.
+                </p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <span class="dot"></span>
+              <div>
+                <h3>Selvstændighed & Fordybelse</h3>
+                <p>
+                  Jeg arbejder bedst, når jeg kan fordybe mig i en opgave og
+                  tage den helt i mål. Jeg trives med ro og en klar retning, så
+                  jeg kan levere noget, jeg er stolt af.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projekter -->
+      <section id="projects">
+        <div class="container">
+          <header>
+            <h2>Projekter</h2>
+          </header>
+
+          <div class="card center">
+            <p>
+              Her finder du mine personlige- og skole repositories, øvelser samt
+              eksamensprojekter:
+            </p>
+            <a target="_blank" href="https://github.com/mifr-ek">
+              <i class="fa-brands fa-square-github"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Færdigheder -->
+      <!-- ===== FÆRDIGHEDER ===== -->
+      <section id="skills">
+        <div class="container">
+          <header>
+            <h2>Færdigheder</h2>
+            <p>
+              Det jeg bruger mest – og det jeg er i gang med at lære mere af.
+            </p>
+          </header>
+
+          <div class="grid-2">
+            <!-- Design & proces -->
+            <div class="card">
+              <h3>Design & Proces</h3>
+              <div class="chips">
+                <span class="chip">Typografi</span>
+                <span class="chip">Farver</span>
+                <span class="chip">Layout</span>
+                <span class="chip">Designsystemer</span>
+                <span class="chip">Prototyping</span>
+                <span class="chip">Tilgængelighed (WCAG)</span>
+                <span class="chip">Micro-motion</span>
+              </div>
+            </div>
+
+            <!-- Frontend -->
+            <div class="card">
+              <h3>Frontend</h3>
+              <div class="chips">
+                <span class="chip">HTML</span>
+                <span class="chip">CSS</span>
+                <span class="chip">Responsivt design</span>
+                <span class="chip">JavaScript (basis)</span>
+                <span class="chip">Astro (begynder)</span>
+                <span class="chip">Lottie</span>
+                <span class="chip">Git & GitHub</span>
+              </div>
+            </div>
+
+            <!-- Værktøjer -->
+            <div class="card">
+              <h3>Værktøjer</h3>
+              <div class="chips">
+                <span class="chip">Figma</span>
+                <span class="chip">Adobe Illustrator</span>
+                <span class="chip">Adobe After Effects</span>
+                <span class="chip">Adobe Premiere Pro</span>
+                <span class="chip">Blender (basis)</span>
+                <span class="chip">Trello</span>
+              </div>
+            </div>
+
+            <!-- Bonus: Arbejdsform -->
+            <div class="card">
+              <h3>Arbejdsform</h3>
+              <div class="chips">
+                <span class="chip">UI-polish</span>
+                <span class="chip">Samarbejde</span>
+                <span class="chip">Feedback-drevet</span>
+                <span class="chip">Struktureret</span>
+                <span class="chip">Detaljeorienteret</span>
+                <span class="chip">Lærenem</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Erfaring -->
+      <section id="experience">
+        <div class="container">
+          <header>
+            <h2>Erfaring</h2>
+          </header>
+
+          <div class="timeline">
+            <div class="tl-item">
+              <span class="dot"></span>
+              <div>
+                <h3>Responsivt Webdesign</h3>
+                <p>
+                  Udvikling af layouts til både mobil, tablet og desktop. Fokus
+                  på grid, visuel rytme og typografisk skalerbarhed.
+                </p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <span class="dot"></span>
+              <div>
+                <h3>UX/UI Designprocesser</h3>
+                <p>
+                  Arbejdet med discovery, behovsafklaring, wireframes,
+                  prototyper og visuelle koncepter i Figma.
+                </p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <span class="dot"></span>
+              <div>
+                <h3>Frontend-Udvikling</h3>
+                <p>
+                  HTML, CSS og JavaScript på begynderniveau. Bygget interaktive
+                  websites med struktur, semantik og brugervenlighed. Kendskab
+                  til Astro, Git & GitHub samt implementering af
+                  Lottie-animationer.
+                </p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <span class="dot"></span>
+              <div>
+                <h3>Motion & Micro-Interactions</h3>
+                <p>
+                  Udvikling af små bevægelser, transitions og UI-flow i både
+                  Figma og After Effects. Fokus på at give brugeroplevelsen mere
+                  liv uden at overvælde.
+                </p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <span class="dot"></span>
+              <div>
+                <h3>Tilgængelighed (WCAG)</h3>
+                <p>
+                  Grundforståelse for farvekontraster, læsbarhed, semantiske
+                  tags og navigation, der hjælper flere brugere godt igennem
+                  oplevelsen.
+                </p>
+              </div>
+            </div>
+
+            <div class="tl-item">
+              <span class="dot"></span>
+              <div>
+                <h3>Branding & Visuel Identitet</h3>
+                <p>
+                  Typografi, farver, tone-of-voice og grafiske elementer til
+                  digitale platforme. Udvikling af moodboards og visuelle spor.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kontakt -->
+      <section id="contact">
+        <div class="container">
+          <header>
+            <h2>Kontakt</h2>
+            <p>Skriv endelig – jeg svarer så hurtigt, jeg kan 😊</p>
+          </header>
+
+          <div class="card">
+            <form action="https://api.web3forms.com/submit" method="POST">
+              <input
+                type="hidden"
+                name="access_key"
+                value="21f446d4-e8b8-4572-a9fc-3b152ede4d99"
+              />
+              <label for="name">Navn</label>
+              <input id="name" name="name" type="text" required />
+
+              <label for="email">E-mail</label>
+              <input id="email" name="email" type="email" required />
+
+              <label for="message">Besked</label>
+              <textarea id="message" name="message" required></textarea>
+
+              <button class="btn btn-primary" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Din originale footer -->
     <footer>
-      <img class="logo-picture" src="./webp/logo.webp" alt="Logo" />
       <p>© 2025 Mie Michella</p>
       <p>
         <span class="bold">Socials</span><br />
@@ -215,12 +423,16 @@
         <a target="_blank" href="https://www.linkedin.com/in/miemichella/"
           ><i class="fa-brands fa-linkedin"></i
         ></a>
-        <a target="_blank" href="https://www.github.com/michellaking/"
+        <a target="_blank" href="https://www.github.com/mifr-ek/"
           ><i class="fa-brands fa-square-github"></i
         ></a>
       </p>
     </footer>
 
-    <script src="script.js"></script>
+    <button id="backToTop" class="back-to-top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js" defer></script>
   </body>
 </html>
